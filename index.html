@@ -22,7 +22,13 @@
 	<div class="content main__content clearfix">
         
 
-        <p>This workbook is due on Monday, March 7, 2022.</p>
+        <div class="dimbox">
+                <h2>CS559 Spring 2022 Sample Solution</h2>
+                <p>This is a sample solution for the Workbook.
+                    You are welcome to refer to it to learn one way to do the assignment
+                    but only after you have turned in your own assignment
+                </p>
+            </div>
 <h2>Learning Goals</h2>
 <ol>
     <li>Learn how to implement a basic UI</li>
@@ -32,7 +38,30 @@
     <li>To write an interesting graphics program.</li>
 </ol>
 
-            <p><strong>This workbook is for advanced points only</strong></p>
+            <!-- <div class="workbook-todo">
+    <strong>TODO:</strong><div> make sure it is clear that requirements are required</div>
+</div>
+
+
+<div class="workbook-todo">
+    <strong>TODO:</strong><div> rethink advanced points only - make droppable</div>
+</div>
+
+
+<div class="workbook-todo">
+    <strong>TODO:</strong><div> clearer about offset curves and rails must really be computed</div>
+</div>
+
+
+<div class="workbook-todo">
+    <strong>TODO:</strong><div> update gallery and demos</div>
+</div>
+ -->
+<!-- <div class="workbook-todo">
+    <strong>TODO:</strong><div> regular scoring, lots of advanced points. you can drop the workbook (even if you get zero). You can keep your advanced points even if you drop, providing you get at least 60 basic</div>
+</div>
+ -->
+<p><strong>This workbook is for advanced points only</strong></p>
 <p>This workbook continues our study of curves in 2D. Last week&rsquo;s workbook went through the key ideas. This week, we&rsquo;ll put those ideas into action in a programming assignment: making a train that goes around a track.</p>
 <p>Unlike all other workbooks, this workbook only has advanced points. If you are satisfied with your grade without earning advanced points, you can consider this workbook optional. However, even if you choose not to do this workbook, you should still read through it: the concepts discussed will help you understand curves better.</p>
 <p>You should also note that the &ldquo;basic&rdquo; parts of this assignment (the things that were basic points in last year&rsquo;s version of the class), are worth a very small amount of advanced points this year. It&rsquo;s a lot of work for a few points. But it&rsquo;s worth it.</p>
@@ -62,46 +91,50 @@
 <p>Note: some of the rubric items have zero points. In prior years, these earned basic points. You still need to do these items because they are required for the more advanced features that do earn points.</p>
 <div class="page-rubric-container">
 <details class="page__rubric">
-<summary>Workbook Rubric (25 points total)</summary>
+<summary>Workbook Rubric (30 points total)</summary>
 <br/>
 <div class="page-rubric-grid">
-    <div class="page-rubric-grid-header rubric-box-bonus">Advanced points (35 possible, of which you can earn a maximum of 25):</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-01-01</div>
-            <div class="page-rubric-grid-points rubric-box-bonus">1 pt</div>
+    <div class="page-rubric-grid-header rubric-box-bonus">Advanced points (51 possible, of which you can earn a maximum of 30):</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-01-01</div>
+            <div class="page-rubric-grid-points rubric-box-bonus">2 pt</div>
             <div class="page-rubric-grid-desc rubric-box-bonus">correctly use UI code</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
-            <div class="page-rubric-grid-points rubric-box-bonus">1 pt</div>
-            <div class="page-rubric-grid-desc rubric-box-bonus">Drawing the track as a simple C(1) curve (cardinal spline) that interpolates the control points (note: this is a big thing, but you mainly get points for the other things it enables)</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
+            <div class="page-rubric-grid-points rubric-box-bonus">5 pt</div>
+            <div class="page-rubric-grid-desc rubric-box-bonus">Drawing the track as a simple curve (cardinal spline) that interpolates the control points</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
+            <div class="page-rubric-grid-points rubric-box-bonus">5 pt</div>
+            <div class="page-rubric-grid-desc rubric-box-bonus">Train goes around the track</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
             <div class="page-rubric-grid-points rubric-box-bonus">3 pt</div>
-            <div class="page-rubric-grid-desc rubric-box-bonus">Train goes around the track  (note: this is a big thing, but you mainly get points for the other things it enables)</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
-            <div class="page-rubric-grid-points rubric-box-bonus">0 pt</div>
             <div class="page-rubric-grid-desc rubric-box-bonus">The interface still works (the track can be moved and the run slider works, even while the train is in motion)</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
-            <div class="page-rubric-grid-points rubric-box-bonus">1 pt</div>
+            <div class="page-rubric-grid-points rubric-box-bonus">3 pt</div>
             <div class="page-rubric-grid-desc rubric-box-bonus">Train has a front</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
             <div class="page-rubric-grid-points rubric-box-bonus">3 pt</div>
             <div class="page-rubric-grid-desc rubric-box-bonus">Train points in the right direction as it goes around the track</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
-            <div class="page-rubric-grid-points rubric-box-bonus">1 pt</div>
-            <div class="page-rubric-grid-desc rubric-box-bonus">Initial track configuration shows off arc length (train should speed up and slow down if arc length parameterization is turned off)</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
+            <div class="page-rubric-grid-points rubric-box-bonus">3 pt</div>
+            <div class="page-rubric-grid-desc rubric-box-bonus">Track configuration shows off arc length (train should speed up and slow down if arc length parameterization is turned off)</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
             <div class="page-rubric-grid-points rubric-box-bonus">3 pt</div>
             <div class="page-rubric-grid-desc rubric-box-bonus">Arc Length parameterization (train goes at a relatively constant speed as it goes around the track, no matter what the control point spacing is). You must add a checkbox to turn this on and off. This one is hard, but it enables several of the other things, so it is actually worth a lot</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
             <div class="page-rubric-grid-points rubric-box-bonus">2 pt</div>
-            <div class="page-rubric-grid-desc rubric-box-bonus">Rail Ties drawn perpendicular to track (requires a correct spline track)</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
+            <div class="page-rubric-grid-desc rubric-box-bonus">Rail Ties drawn perpendicular to track</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
             <div class="page-rubric-grid-points rubric-box-bonus">2 pt</div>
-            <div class="page-rubric-grid-desc rubric-box-bonus">Rail Ties drawn with correct spacing (requires rail-ties and arc-length)</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
+            <div class="page-rubric-grid-desc rubric-box-bonus">Rail Ties drawn with correct spacing (this is simple once you have arc-length</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
             <div class="page-rubric-grid-points rubric-box-bonus">3 pt</div>
             <div class="page-rubric-grid-desc rubric-box-bonus">Parallel rails</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
             <div class="page-rubric-grid-points rubric-box-bonus">5 pt</div>
-            <div class="page-rubric-grid-desc rubric-box-bonus">Multiple cars (requires keeping the cars a fixed distance apart, which requires arc-length)</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
+            <div class="page-rubric-grid-desc rubric-box-bonus">Multiple cars (requires keeping the cars a fixed distance apart)</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
             <div class="page-rubric-grid-points rubric-box-bonus">3 pt</div>
             <div class="page-rubric-grid-desc rubric-box-bonus">Trucked wheels (requires keeping the pairs of wheels the correct distance apart and on the track, and having the train car positioned appropriately - this is only for people who are into trains and appreciate this detail)</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
             <div class="page-rubric-grid-points rubric-box-bonus">1 pt</div>
             <div class="page-rubric-grid-desc rubric-box-bonus">Slider to control tension</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
             <div class="page-rubric-grid-points rubric-box-bonus">2 pt</div>
-            <div class="page-rubric-grid-desc rubric-box-bonus">Switchable B-Splines (you must still have Cardinals)</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
+            <div class="page-rubric-grid-desc rubric-box-bonus">Switchable B-Splines</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
             <div class="page-rubric-grid-points rubric-box-bonus">2 pt</div>
             <div class="page-rubric-grid-desc rubric-box-bonus">Smoke</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
             <div class="page-rubric-grid-points rubric-box-bonus">1 pt</div>
             <div class="page-rubric-grid-desc rubric-box-bonus">Scenery</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
             <div class="page-rubric-grid-points rubric-box-bonus">1 pt</div>
-            <div class="page-rubric-grid-desc rubric-box-bonus">Scenery adapts to the track</div></div>
+            <div class="page-rubric-grid-desc rubric-box-bonus">Scenery adapts to the track</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
+            <div class="page-rubric-grid-points rubric-box-bonus">1 pt</div>
+            <div class="page-rubric-grid-desc rubric-box-bonus">Artistic merit: nice looking train</div><div class="page-rubric-grid-box rubric-box-bonus">Box tr-03-01</div>
+            <div class="page-rubric-grid-points rubric-box-bonus">1 pt</div>
+            <div class="page-rubric-grid-desc rubric-box-bonus">Artistic merit: nice looking track</div></div>
 </details>
 </div>
 <h2 id="get-started">Get Started</h2>
